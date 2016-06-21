@@ -1,0 +1,36 @@
+{
+  "name":"staging",
+  "run_list": [
+    "recipe[build-essential]",
+    "recipe[apt]",
+    "recipe[user]",
+    "recipe[sudo]",
+    "recipe[hostname]",
+    "recipe[ssh_known_hosts]",
+    "recipe[curl]",
+    "recipe[fail2ban]",
+    "recipe[ruby_build]",
+    "recipe[mongodb]",
+    "recipe[phusionpassenger]"
+  ],
+  "automatic": {
+    "ipaddress": "<host_ip>"
+  },
+  "authorization": {
+    "sudo": {
+      "groups": [
+        "sudo",
+        "admin"
+      ],
+      "users": [
+        "deployer"
+      ],
+      "passwordless": true
+    }
+  },
+  "fail2ban": {
+    "bantime": 600,
+    "maxretry": 3,
+    "backend": "auto"
+  }
+}

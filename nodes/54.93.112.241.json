@@ -1,0 +1,56 @@
+{
+  "name": "staging",
+  "run_list": [
+    "recipe[build-essential]",
+    "recipe[apt]",
+    "recipe[user]",
+    "recipe[user::data_bag]",
+    "recipe[sudo]",
+    "recipe[hostname]",
+    "recipe[ssh_known_hosts]",
+    "recipe[curl]",
+    "recipe[fail2ban]",
+    "recipe[ruby_build]",
+    "recipe[ruby_rbenv::system]",
+    "recipe[mongodb]",
+    "recipe[phusionpassenger]"
+  ],
+  "automatic": {
+    "ipaddress": "54.93.112.241"
+  },
+  "users": [
+    "deployer"
+  ],
+  "authorization": {
+    "sudo": {
+      "groups": [
+        "sudo",
+        "admin",
+        "deployer"
+      ],
+      "users": [
+        "deployer"
+      ],
+      "passwordless": true
+    }
+  },
+  "rbenv": {
+    "user": "deployer",
+    "rubies": [
+      "2.2.5"
+    ],
+    "global": "2.2.5",
+    "gems": {
+      "2.2.5": [
+        {
+          "name": "bundler"
+        }
+      ]
+    }
+  },
+  "fail2ban": {
+    "bantime": 600,
+    "maxretry": 3,
+    "backend": "auto"
+  }
+}

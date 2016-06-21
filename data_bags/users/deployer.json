@@ -1,0 +1,16 @@
+{
+  "id": "deployer",
+  "comment": "deployer",
+  "groups": [
+    "admin",
+    "sudo",
+    "deployer"
+  ],
+  "home": "/home/deployer",
+  "create_group": true,
+  "shell": "/bin/bash",
+  "ssh_keygen": true,
+  "ssh_keys": [
+    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCr/dI8Q5sV0d5NGlsrlK28aTdCuyUe7CmjdxkHDAGLF/THKeh4uAeTe4HY7b27VGBSUSeHqGNCk/wu96oNslo1Khm1GS0bdd6m7imd4VTVO1fMXkozk3Ik5v8GpaQ/0H4yTFagUZF+G4uSpmQ9hijTnYTwXus7GChvaN7PqTT0yeuMMkanQb0aIBZp6Y2VHqVu4P4ZA4n809fJ3EZ+i60FbhHmBCqltIdmawH/a2VyeqMcydkRW/ORym4ICTjklcxLovK6mSW4dkPk5iLl7Zv2Ft/76qVYtlHpHQxngyfMuwA/rS4G5wVn28tidHF9RZgtPQdkGyYsCrimhqNhsGhL kakkoyun@gmail.com"
+  ]
+}
