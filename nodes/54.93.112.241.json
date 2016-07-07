@@ -13,7 +13,8 @@
     "recipe[ruby_build]",
     "recipe[ruby_rbenv::system]",
     "recipe[mongodb]",
-    "recipe[phusionpassenger]"
+    "recipe[nodejs]",
+    "recipe[passenger-rbenv-nginx]"
   ],
   "automatic": {
     "ipaddress": "54.93.112.241"
